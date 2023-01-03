@@ -2,6 +2,10 @@
   "name": "technical-test-travelport",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arnaufugarolas/technical-test-travelport.git"
+  },
   "author": "Arnau Fugarolas Barbena",
   "scripts": {
     "build": "react-scripts build",
