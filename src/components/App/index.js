@@ -1,11 +1,20 @@
-import './styles.css'
+import data from '../../resources/dataSamples/users/index'
+import React from 'react'
+import UserCard from '../UserCard'
 
-function Index () {
-  return (
-    <div className='App'>
-      <header className='App-header' />
-    </div>
-  )
+const Index = () => {
+  const users = []
+
+  for (let i = 0; i < data.length; i++) {
+    const user = data[i]
+    users.push(
+      React.createElement(UserCard, {
+        user: user,
+        key: i
+      })
+    )
+  }
+  return users
 }
 
 export default Index
