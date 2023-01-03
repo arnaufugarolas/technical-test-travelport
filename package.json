@@ -22,12 +22,6 @@
       "last 1 safari version"
     ]
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -37,5 +31,12 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^3.1.0"
   },
-  "packageManager": "yarn@3.3.1"
+  "packageManager": "yarn@3.3.1",
+  "standard": {
+    "globals": [
+      "test",
+      "expect",
+      "beforeEach"
+    ]
+  }
 }
