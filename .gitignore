@@ -21,3 +21,5 @@ yarn.lock
 .pnp.cjs
 .yarn
 node_modules
+
+.idea
