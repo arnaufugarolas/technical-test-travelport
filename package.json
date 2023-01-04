@@ -26,6 +26,11 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "transformIgnorePatterns": [
+      ".yarn/cache/(?!axios)/"
+    ]
+  },
   "dependencies": {
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.10.5",
@@ -39,10 +44,14 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^3.1.0"
   },
+  "devDependencies": {
+    "jest": "^29.3.1"
+  },
   "packageManager": "yarn@3.3.1",
   "standard": {
     "globals": [
       "test",
+      "it",
       "expect",
       "beforeEach"
     ]
