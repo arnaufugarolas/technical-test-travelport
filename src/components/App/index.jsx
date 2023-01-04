@@ -1,27 +1,13 @@
 import React, { useEffect } from 'react'
 import UserCard from '../UserCard'
 import Button from '../Button/index'
-import axios from 'axios'
+import getData from './getData'
 
 const Index = () => {
   const [usersToShow, setUsersToShow] = React.useState(0)
   const [data, setData] = React.useState([])
   const usersLimit = 5
   const users = []
-
-  const getData = () => {
-    axios.get('https://randomuser.me/api/', {
-      params: {
-        results: usersLimit
-      }
-    })
-      .then((response) => {
-        setData(response.data.results)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-  }
 
   const showMoreButtonEvent = () => {
     usersToShow < usersLimit
@@ -37,7 +23,7 @@ const Index = () => {
 
   useEffect(() => {
     if (data.length === 0) {
-      getData()
+      getData(usersLimit).then(data => setData(data))
     }
   }, [data])
 
