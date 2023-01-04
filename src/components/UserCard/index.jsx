@@ -1,6 +1,6 @@
 import { Image, Info, InfoItem, Name, UserCard } from './styles'
 
-const index = (props) => {
+const Index = (props) => {
   const { user } = props
 
   return (
@@ -23,4 +23,4 @@ const index = (props) => {
   )
 }
 
-export default index
+export default Index
